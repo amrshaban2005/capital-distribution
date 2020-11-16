@@ -1,0 +1,441 @@
+{
+  "contractName": "SelfDestruct",
+  "abi": [
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_dest",
+          "type": "address"
+        }
+      ],
+      "name": "forceEther",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_dest\",\"type\":\"address\"}],\"name\":\"forceEther\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{\"forceEther(address)\":{\"params\":{\"_dest\":\"Address to send all ETH in the contract to\"}}}},\"userdoc\":{\"methods\":{\"forceEther(address)\":{\"notice\":\"Self-destructs the contract to force ETH to the destination address\"}},\"notice\":\"Used for forcibly sending ETH to BulkCheckout for testing\"}},\"settings\":{\"compilationTarget\":{\"/C/defi-ventures/util/captial-distribution/capitaldistribution/contracts/test/SelfDestruct.sol\":\"SelfDestruct\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/defi-ventures/util/captial-distribution/capitaldistribution/contracts/test/SelfDestruct.sol\":{\"keccak256\":\"0xac42aae9cf8794eb95eb5b068a3cb34050103d382a3c06d9252f82c15a1d1a9d\",\"urls\":[\"bzz-raw://49435abf29d0692665b7be9b3e733264c6d13617da64039608ebc7cb3093d0f9\",\"dweb:/ipfs/Qmbacbuh8MUudtRDxjYVqYe5kFmdia55FX7o3AqkKtfuL9\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50609d8061001e6000396000f3fe608060405260043610601f5760003560e01c8063baec8d8014602a576025565b36602557005b600080fd5b348015603557600080fd5b50605960048036036020811015604a57600080fd5b50356001600160a01b0316605b565b005b806001600160a01b0316fffea2646970667358221220e0896b1bd2d0f4a3f304e1037c1aeaf363843735959154100543ac5209cad93d64736f6c63430006020033",
+  "deployedBytecode": "0x608060405260043610601f5760003560e01c8063baec8d8014602a576025565b36602557005b600080fd5b348015603557600080fd5b50605960048036036020811015604a57600080fd5b50356001600160a01b0316605b565b005b806001600160a01b0316fffea2646970667358221220e0896b1bd2d0f4a3f304e1037c1aeaf363843735959154100543ac5209cad93d64736f6c63430006020033",
+  "sourceMap": "104:297:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:297:2;;;;;;;",
+  "deployedSourceMap": "104:297:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;284:82;;8:9:-1;5:2;;;30:1;27;20:12;5:2;284:82:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;284:82:2;-1:-1:-1;;;;;284:82:2;;:::i;:::-;;;355:5;-1:-1:-1;;;;;342:19:2;",
+  "source": "pragma solidity ^0.6.2;\n\n\n/**\n * @notice Used for forcibly sending ETH to BulkCheckout for testing\n */\n\ncontract SelfDestruct {\n  /**\n   * @notice Self-destructs the contract to force ETH to the destination address\n   * @param _dest Address to send all ETH in the contract to\n   */\n  function forceEther(address payable _dest) external {\n    selfdestruct(_dest);\n  }\n\n  receive() external payable {}\n}\n",
+  "sourcePath": "C:/defi-ventures/util/captial-distribution/capitaldistribution/contracts/test/SelfDestruct.sol",
+  "ast": {
+    "absolutePath": "/C/defi-ventures/util/captial-distribution/capitaldistribution/contracts/test/SelfDestruct.sol",
+    "exportedSymbols": {
+      "SelfDestruct": [
+        283
+      ]
+    },
+    "id": 284,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 268,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@notice Used for forcibly sending ETH to BulkCheckout for testing",
+        "fullyImplemented": true,
+        "id": 283,
+        "linearizedBaseContracts": [
+          283
+        ],
+        "name": "SelfDestruct",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 277,
+              "nodeType": "Block",
+              "src": "336:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 274,
+                        "name": "_dest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "355:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 273,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -21,
+                      "src": "342:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                        "typeString": "function (address payable)"
+                      }
+                    },
+                    "id": 275,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "342:19:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 276,
+                  "nodeType": "ExpressionStatement",
+                  "src": "342:19:2"
+                }
+              ]
+            },
+            "documentation": "@notice Self-destructs the contract to force ETH to the destination address\n@param _dest Address to send all ETH in the contract to",
+            "functionSelector": "baec8d80",
+            "id": 278,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "forceEther",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 271,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 270,
+                  "name": "_dest",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 278,
+                  "src": "304:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 269,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:15:2",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "303:23:2"
+            },
+            "returnParameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "336:0:2"
+            },
+            "scope": 283,
+            "src": "284:82:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 281,
+              "nodeType": "Block",
+              "src": "397:2:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 282,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 279,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:2:2"
+            },
+            "returnParameters": {
+              "id": 280,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "397:0:2"
+            },
+            "scope": 283,
+            "src": "370:29:2",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 284,
+        "src": "104:297:2"
+      }
+    ],
+    "src": "0:402:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/defi-ventures/util/captial-distribution/capitaldistribution/contracts/test/SelfDestruct.sol",
+    "exportedSymbols": {
+      "SelfDestruct": [
+        283
+      ]
+    },
+    "id": 284,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 268,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@notice Used for forcibly sending ETH to BulkCheckout for testing",
+        "fullyImplemented": true,
+        "id": 283,
+        "linearizedBaseContracts": [
+          283
+        ],
+        "name": "SelfDestruct",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 277,
+              "nodeType": "Block",
+              "src": "336:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 274,
+                        "name": "_dest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "355:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 273,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -21,
+                      "src": "342:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                        "typeString": "function (address payable)"
+                      }
+                    },
+                    "id": 275,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "342:19:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 276,
+                  "nodeType": "ExpressionStatement",
+                  "src": "342:19:2"
+                }
+              ]
+            },
+            "documentation": "@notice Self-destructs the contract to force ETH to the destination address\n@param _dest Address to send all ETH in the contract to",
+            "functionSelector": "baec8d80",
+            "id": 278,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "forceEther",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 271,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 270,
+                  "name": "_dest",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 278,
+                  "src": "304:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 269,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:15:2",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "303:23:2"
+            },
+            "returnParameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "336:0:2"
+            },
+            "scope": 283,
+            "src": "284:82:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 281,
+              "nodeType": "Block",
+              "src": "397:2:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 282,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 279,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:2:2"
+            },
+            "returnParameters": {
+              "id": 280,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "397:0:2"
+            },
+            "scope": 283,
+            "src": "370:29:2",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 284,
+        "src": "104:297:2"
+      }
+    ],
+    "src": "0:402:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-11-12T04:03:02.305Z",
+  "devdoc": {
+    "methods": {
+      "forceEther(address)": {
+        "params": {
+          "_dest": "Address to send all ETH in the contract to"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "forceEther(address)": {
+        "notice": "Self-destructs the contract to force ETH to the destination address"
+      }
+    },
+    "notice": "Used for forcibly sending ETH to BulkCheckout for testing"
+  }
+}
